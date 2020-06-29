@@ -2,6 +2,7 @@
 #define MUX4051_H
 
 #include <Arduino.h>
+#include <FastGPIO.h>
 
 class Mux4051
 {
@@ -20,7 +21,8 @@ class Mux4051
 	begin(int IN, int A, int B, int C, int max, int delau);
 	set_out(char value);
 	int read(void);
-	int readStep(void);
+	uint16_t readStep(void);
+	uint16_t readStep1(void);
 	
 	Reset(void);
 
